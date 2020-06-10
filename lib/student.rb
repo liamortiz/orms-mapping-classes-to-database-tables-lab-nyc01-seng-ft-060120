@@ -32,6 +32,7 @@ class Student
     DB[:conn].execute("DROP TABLE students")
   end
   
-  def self.create
+  def self.create(hash)
+    Student.new(hash[:name], hash[:grade])
   end
 end
