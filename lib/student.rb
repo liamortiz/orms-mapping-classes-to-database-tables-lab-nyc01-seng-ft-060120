@@ -11,7 +11,6 @@ class Student
   end
   
   def save
-    
     query = <<-QUERY
       INSERT INTO students(name, grade) VALUES(?, ?)
     QUERY
