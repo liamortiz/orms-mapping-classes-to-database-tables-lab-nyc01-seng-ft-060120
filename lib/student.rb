@@ -11,8 +11,12 @@ class Student
   end
   
   def save
-    last_id = DB[:conn].execute("SELECT id FROM students")
-    p last_id
+    
+    query = <<-QUERY
+      INSERT INTO students(name, age) VALUES(?, ?)
+    QUERY
+    
+    DB[:conn].execute(query)
   end
   
   def self.create_table
