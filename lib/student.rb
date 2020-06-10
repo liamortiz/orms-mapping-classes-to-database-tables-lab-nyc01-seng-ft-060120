@@ -12,8 +12,6 @@ class Student
   
   def save
     last_id = DB[:conn].execute("SELECT id FROM students")
-    p last_id
-    DB[:conn].execute("INSERT INTO students(name, age,id) VALUE(#{@id} #{@name}, #{@age})")
     binding.pry
   end
   
