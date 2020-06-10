@@ -24,7 +24,7 @@ class Student
       CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
         name TEXT,
-        album TEXT)
+        grade INTEGER)
     QUERY
     DB[:conn].execute(query)
   end
