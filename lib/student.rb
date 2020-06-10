@@ -12,7 +12,7 @@ class Student
   
   def save
     last_id = DB[:conn].execute("SELECT id FROM students")
-    binding.pry
+    p last_id
   end
   
   def self.create_table
