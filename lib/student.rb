@@ -33,8 +33,6 @@ class Student
   end
   
   def self.create(hash)
-    hash.each do |key, value|
-    end
     Student.new(hash[:name], hash[:grade])
   end
 end
