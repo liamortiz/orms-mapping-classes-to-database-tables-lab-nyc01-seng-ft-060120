@@ -1,5 +1,6 @@
 # Remember, you can access your database connection anywhere in this class
 #  with DB[:conn]
+require 'pry'
 class Student
   attr_accessor :name, :grade
   attr_reader :id
@@ -13,6 +14,7 @@ class Student
     last_id = DB[:conn].execute("SELECT id FROM students")
     p last_id
     DB[:conn].execute("INSERT INTO students(name, age,id) VALUE(#{@id} #{@name}, #{@age})")
+    binding.pry
   end
   
   def self.create_table
