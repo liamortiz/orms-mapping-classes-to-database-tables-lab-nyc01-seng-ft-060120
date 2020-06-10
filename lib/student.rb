@@ -10,6 +10,7 @@ class Student
   end
   
   def save
+    DB[:conn].execute("INSERT INTO students(name, age,id) VALUE(#{@id} #{@name}, #{@age})")
   end
   
   def self.create_table
