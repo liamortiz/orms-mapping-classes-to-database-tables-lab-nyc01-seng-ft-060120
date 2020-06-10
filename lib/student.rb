@@ -16,7 +16,7 @@ class Student
     QUERY
     DB[:conn].execute(query, self.name, self.grade)
     
-    last_id = DB[:conn].execute("SELECT id FROM students")
+    last_id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0]
     p last_id
   end
   
