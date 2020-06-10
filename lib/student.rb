@@ -13,7 +13,7 @@ class Student
   def save
     
     query = <<-QUERY
-      INSERT INTO students(name, age) VALUES(?, ?)
+      INSERT INTO students(name, grade) VALUES(?, ?)
     QUERY
     
     DB[:conn].execute(query, self.name, self.grade)
